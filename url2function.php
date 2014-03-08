@@ -24,37 +24,11 @@
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
-
 require_once(dirname(__FILE__).'/backend/backend.php');
+require_once(dirname(__FILE__).'/admin/settings.php');
 
-//adding rewrite rules
-add_action( 'wp_loaded','u2f_flush_rules' );
-add_filter( 'rewrite_rules_array','u2f_rewrite_rules' );
-add_filter( 'query_vars','u2f_query_vars' );
-
-// flush_rules() if our rules are not yet included
-function u2f_flush_rules() {
-    $rules = get_option( 'rewrite_rules' );
-
-    if ( ! isset( $rules['(dofunc)/(.+)$'] ) ) {
-	global $wp_rewrite;
-   	$wp_rewrite->flush_rules();
-    }
-}
-
-// New rule to catch all parms from url and put it in parmsu2f
-function u2f_rewrite_rules( $rules ) {
-	$newrules = array();
-	$newrules['(dofunc)/(.+)$'] = 'index.php?pagename=$matches[1]&parmsu2f=$matches[2]';
-
-	return $newrules + $rules;
-}
-
-function u2f_query_vars( $vars ) {
-
-    array_push($vars, 'parmsu2f');
-    return $vars;
-}
+//set default value
+add_option('u2f_endpoint', 'dofunc' );
 
 //Main function to parse parms a do real work :-)
 function process_query_request() {
