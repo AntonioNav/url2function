@@ -38,6 +38,14 @@ function u2f_plugin_menu() {
 }
 
 function u2f_plugin_options() {
+    // variables for the field and option names
+    $opt_name = 'u2f_endpoint';
+    $hidden_field_name = 'u2f_submit_hidden';
+    $nonce_field_name = 'u2fnonce';
+    $data_field_name = 'u2f_endpoint';
+
+    // Read in existing option value from database
+    $opt_val = get_option( $opt_name );
 
     //must check that the user has the required capability
     if (!current_user_can('manage_options'))
@@ -45,17 +53,16 @@ function u2f_plugin_options() {
       wp_die(__('You do not have sufficient permissions to access this page.','url2function'));
     }
 
-    // variables for the field and option names
-    $opt_name = 'u2f_endpoint';
-    $hidden_field_name = 'u2f_submit_hidden';
-    $data_field_name = 'u2f_endpoint';
-
-    // Read in existing option value from database
-    $opt_val = get_option( $opt_name );
-
     // See if the user has posted us some information
     // If they did, this hidden field will be set to 'Y'
     if( isset($_POST[ $hidden_field_name ]) && $_POST[ $hidden_field_name ] == 'Y' ) {
+
+        //Verify nonce to prevent CSRF attack
+	$nonce = $_POST[$nonce_field_name];
+
+        if (!wp_verify_nonce($nonce, 'u2f-nonce')) {
+	    wp_die(__('Security check','url2function'));
+	}
         // Read their posted value
         $opt_val = $_POST[ $data_field_name ];
 
@@ -78,6 +85,7 @@ function u2f_plugin_options() {
 
         <form name="form1" method="post" action="">
             <input type="hidden" name="<?php echo $hidden_field_name; ?>" value="Y">
+            <input type="hidden" name="<?php echo $nonce_field_name; ?>" value="<?php echo wp_create_nonce('u2f-nonce'); ?>">
 
             <p><?php _e('URL EndPoint:','url2function'); ?>
                 <input type="text" name="<?php echo $data_field_name; ?>" value="<?php echo $opt_val; ?>" size="20">
@@ -91,4 +99,3 @@ function u2f_plugin_options() {
     <?php
 
 }
-
