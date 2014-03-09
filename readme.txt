@@ -27,4 +27,10 @@ You can call the example function with this url: http://yourWP.site/dofunc/funct
 and you get a json object with {"error":0,"result":"01:06:40"}
 
 == Changelog ==
-v0.0.1 - First version
+
+= 0.0.2 =
+* Added Settings page in Options menu
+* Added i18n support
+
+= 0.0.1 =
+* First version

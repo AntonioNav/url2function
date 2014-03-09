@@ -34,7 +34,7 @@ function u2f_query_vars( $vars ) {
 }
 
 function u2f_plugin_menu() {
-	add_options_page( 'URL2Function Options', 'URL2Function', 'manage_options', 'url2function-uid', 'u2f_plugin_options' );
+	add_options_page( 'URL2Function Options', 'URL2Function Options', 'manage_options', 'url2function-uid', 'u2f_plugin_options' );
 }
 
 function u2f_plugin_options() {
@@ -42,7 +42,7 @@ function u2f_plugin_options() {
     //must check that the user has the required capability
     if (!current_user_can('manage_options'))
     {
-      wp_die('You do not have sufficient permissions to access this page.');
+      wp_die(__('You do not have sufficient permissions to access this page.','url2function'));
     }
 
     // variables for the field and option names
@@ -65,22 +65,21 @@ function u2f_plugin_options() {
 
         // Put an settings updated message on the screen
 
-        ?>
-        <div class="updated"><p><strong>settings saved.</strong></p></div>
-        <?php
-
+        echo '<div class="updated"><p><strong>';
+        _e('settings saved.','url2function');
+        echo '</strong></p></div>';
     }
 
     ?>
 
     <div class="wrap">
 
-        <h2>URL2Function Plugin Settings</h2>
+        <h2><?php _e('URL2Function Plugin Settings','url2function'); ?></h2>
 
         <form name="form1" method="post" action="">
             <input type="hidden" name="<?php echo $hidden_field_name; ?>" value="Y">
 
-            <p>URL EndPoint:
+            <p><?php _e('URL EndPoint:','url2function'); ?>
                 <input type="text" name="<?php echo $data_field_name; ?>" value="<?php echo $opt_val; ?>" size="20">
             </p><hr />
 

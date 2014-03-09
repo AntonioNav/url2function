@@ -3,10 +3,11 @@
  * Plugin Name: URL to Function
  * Plugin URI: https://github.com/AntonioNav/url2function
  * Description: Plugin for WordPress that allow to execute custom PHP function from a URL
- * Version: 0.0.1
+ * Version: 0.0.2
  * Author: Antonio Navarro
  * Author URI: https://www.google.com/+AntonioNavarro
  * License: GPLv2
+ * Text Domain: url2function
  */
 
 /*  Copyright 2014  Antonio Navarro  (email : antonio@hunos.net)
@@ -24,6 +25,9 @@
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
+
+load_plugin_textdomain('url2function', false, basename(dirname(__FILE__)).'/languages/' );
+
 require_once(dirname(__FILE__).'/backend/backend.php');
 require_once(dirname(__FILE__).'/admin/settings.php');
 

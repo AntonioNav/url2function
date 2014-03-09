@@ -8,3 +8,5 @@ to display tables and graphics.
 
 With this plugin you have the minimun that you need to map a URL from a page of your WP to a PHP function.
 It's a simply entry point for extend with your needs.
+
+View readme.txt for more details.
