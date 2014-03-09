@@ -33,6 +33,7 @@ require_once(dirname(__FILE__).'/admin/settings.php');
 
 //set default value
 add_option('u2f_endpoint', 'dofunc' );
+u2f_flush_rules();
 
 //Main function to parse parms a do real work :-)
 function process_query_request() {

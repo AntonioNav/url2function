@@ -2,7 +2,6 @@
 add_action( 'admin_menu', 'u2f_plugin_menu' );
 
 //adding rewrite rules
-add_action( 'wp_loaded','u2f_flush_rules' );
 add_filter( 'rewrite_rules_array','u2f_rewrite_rules' );
 add_filter( 'query_vars','u2f_query_vars' );
 
