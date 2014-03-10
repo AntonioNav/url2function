@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: URL2Function\n"
-"POT-Creation-Date: 2014-03-09 00:05+0100\n"
-"PO-Revision-Date: 2014-03-09 00:34+0100\n"
+"POT-Creation-Date: 2014-03-11 00:45+0100\n"
+"PO-Revision-Date: 2014-03-11 00:45+0100\n"
 "Last-Translator: Antonio Navarro <antonio@hunos.net>\n"
 "Language-Team: Antonio Navarro <antonio@hunos.net>\n"
 "Language: es_ES\n"
@@ -17,18 +17,90 @@ msgstr ""
 "X-Poedit-SearchPath-0: C:\\Utilidades\\xampp\\htdocs\\wordpress\\wp-content"
 "\\plugins\\url2function\n"
 
-#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:45
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:53
 msgid "You do not have sufficient permissions to access this page."
 msgstr "No tiene suficientes permisos para acceder a esta página."
 
-#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:69
-msgid "settings saved."
-msgstr "Configuración guardada."
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:64
+msgid "Security check"
+msgstr "Verificación de Seguridad"
 
-#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:77
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:79
 msgid "URL2Function Plugin Settings"
 msgstr "Configuración Plugin URL2Function"
 
-#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:82
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:83
+msgid "About the Author"
+msgstr "Acerca del Autor"
+
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:90
+msgid "Developed by"
+msgstr "Desarrollado por"
+
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:93
+msgid "Thank you for using this plugin on your site"
+msgstr "Gracias por usar este plugin en su web"
+
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:95
+msgid ""
+"You can contribute to support and improve this plugin clicking this button:"
+msgstr "Puede ayudar a mantener y mejorar este plugin pinchando en este botón:"
+
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:100
+msgid "You can contact with me in "
+msgstr "Puede contactar conmigo en"
+
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:114
 msgid "URL EndPoint:"
 msgstr "Terminación URL:"
+
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:119
+msgid "Important!"
+msgstr "Importante!"
+
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:120
+msgid "You have to:"
+msgstr "Tienes que:"
+
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:123
+msgid "Create a static page with 'slug' and 'permalink' equal to:"
+msgstr "Crear una página estática con un 'slug' y 'permalink' igual a:"
+
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:125
+msgid "(save to update if you change the Endpoint)."
+msgstr "(guarde para actualizar si ha modificado la Terminación)."
+
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:127
+msgid ""
+"Activate in Options --> Permalinks, URL with 'postname' (the 5th option)."
+msgstr ""
+"Activar en Ajustes --> Enlaces Permanentes, 'Nombre de Entrada' (la 5ª "
+"opción)."
+
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:129
+msgid "This plugin don't work until you satisfy this points."
+msgstr "El plugin no funcionará si no realiza estos puntos."
+
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:133
+msgid "You can then try to access"
+msgstr "Después puede probar a acceder a"
+
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:136
+msgid "to test the plugin."
+msgstr "para probar el plugin."
+
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:139
+msgid "You have to obtain this JSON-object:"
+msgstr "Debería obtener el siguiente objeto JSON:"
+
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:145
+msgid "When this is working, you have to edit 'backend.php' file "
+msgstr "Cuando funcione el test, tiene que editar el fichero 'backend.php'"
+
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:146
+msgid "and add your custom mappings and functions."
+msgstr "y añadir sus propias funciones y mapeos."
+
+#: C:\Utilidades\xampp\htdocs\wordpress\wp-content\plugins\url2function/admin/settings.php:153
+msgid "settings saved."
+msgstr "Configuración guardada."

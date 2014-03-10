@@ -17,8 +17,8 @@ function processRequest($parms){
 
     switch ($function){
         //The name in URL
-        case "function":
-            return doFunction($parms);
+        case "test":
+            return doTestFunction($parms);
             break;
         default:
             return array(
@@ -36,7 +36,7 @@ function processRequest($parms){
  *
  * @return array
  */
-function doFunction($parms){
+function doTestFunction($parms){
 
     //Some validation
     switch (count($parms)) {
