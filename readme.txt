@@ -4,7 +4,7 @@ Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: ajax, permalinks, url, function
 Requires at least: 3.0
 Tested up to: 3.8.1
-Stable tag: 0.0.1
+Stable tag: 0.0.3
 License: GNU-GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,10 +23,14 @@ Create a new Page with name 'Do function' and slug 'dofunc' and permalink 'dofun
 Use a Template Page for this new page only with this function: process_query_request();
 In Settings-->Permalinks, use 'Post Name'.
 
-You can call the example function with this url: http://yourWP.site/dofunc/function/4000/
+You can call the example function with this url: http://yourWP.site/dofunc/test/4000/
 and you get a json object with {"error":0,"result":"01:06:40"}
 
 == Changelog ==
+
+= 0.0.3 =
+* Added more information in Admin page.
+* Changed test function URL.
 
 = 0.0.2 =
 * Added Settings page in Options menu
